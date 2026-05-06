@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import { INSTAGRAM_URL } from "@/lib/whatsapp";
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
             Joias em prata 925 com design refinado. Elegância e sofisticação para todos os momentos.
           </p>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="mt-6 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground/70 transition-colors hover:border-foreground hover:text-foreground">
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram @selo.925" className="mt-6 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground/70 transition-colors hover:border-foreground hover:text-foreground">
             <Instagram className="h-4 w-4" />
           </a>
         </div>
