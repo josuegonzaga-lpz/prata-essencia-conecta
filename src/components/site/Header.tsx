@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-selo925.jpeg";
 
 const NAV = [
   { label: "Coleção", href: "#colecao" },
@@ -14,9 +15,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="#top" className="group flex items-baseline gap-2">
-          <span className="font-display text-2xl tracking-[0.18em] text-ink">SELO</span>
-          <span className="font-display text-2xl tracking-[0.18em] text-silver-dark">925</span>
+        <a href="#top" className="group flex items-center gap-3">
+          <span className="inline-flex h-10 w-10 overflow-hidden rounded-full ring-1 ring-border">
+            <img src={logo} alt="SELO 925" className="h-full w-full object-cover" />
+          </span>
+          <span className="flex items-baseline gap-2">
+            <span className="font-display text-2xl tracking-[0.18em] text-ink">SELO</span>
+            <span className="font-display text-2xl tracking-[0.18em] text-teal">925</span>
+          </span>
         </a>
         <nav className="hidden items-center gap-9 md:flex">
           {NAV.map((n) => (
