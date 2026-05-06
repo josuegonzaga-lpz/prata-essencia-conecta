@@ -37,6 +37,9 @@
   --color-silver-dark: var(--silver-dark);
   --color-ink: var(--ink);
   --color-whatsapp: var(--whatsapp);
+  --color-teal: var(--teal);
+  --color-teal-deep: var(--teal-deep);
+  --color-teal-soft: var(--teal-soft);
 }
 
 :root {
@@ -44,44 +47,48 @@
 
   /* Off-white background, deep ink foreground */
   --background: oklch(0.985 0.003 90);          /* warm off-white */
-  --foreground: oklch(0.18 0.01 270);           /* almost black w/ blue tint */
-  --ink: oklch(0.14 0.01 270);
+  --foreground: oklch(0.20 0.025 190);          /* deep teal-ink */
+  --ink: oklch(0.16 0.025 190);
 
   --card: oklch(1 0 0);
   --card-foreground: var(--foreground);
   --popover: oklch(1 0 0);
   --popover-foreground: var(--foreground);
 
-  /* Primary = silver-ink, sophisticated near-black */
-  --primary: oklch(0.22 0.01 270);
+  /* Primary = signature deep teal from the SELO 925 logo */
+  --primary: oklch(0.32 0.05 185);
   --primary-foreground: oklch(0.985 0.003 90);
 
-  --secondary: oklch(0.95 0.005 90);
+  --secondary: oklch(0.95 0.012 185);
   --secondary-foreground: var(--foreground);
 
-  --muted: oklch(0.94 0.005 90);
-  --muted-foreground: oklch(0.45 0.01 270);
+  --muted: oklch(0.94 0.008 185);
+  --muted-foreground: oklch(0.45 0.02 190);
 
-  --accent: oklch(0.93 0.005 90);
+  --accent: oklch(0.93 0.015 185);
   --accent-foreground: var(--foreground);
 
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.985 0 0);
 
-  --border: oklch(0.9 0.005 90);
-  --input: oklch(0.9 0.005 90);
-  --ring: oklch(0.7 0.01 270);
+  --border: oklch(0.9 0.012 185);
+  --input: oklch(0.9 0.012 185);
+  --ring: oklch(0.55 0.05 185);
 
   /* Brand-specific */
-  --silver: oklch(0.82 0.005 250);
-  --silver-dark: oklch(0.55 0.005 250);
+  --silver: oklch(0.84 0.005 220);
+  --silver-dark: oklch(0.58 0.008 200);
   --whatsapp: oklch(0.65 0.18 145);
+  --teal: oklch(0.32 0.05 185);
+  --teal-deep: oklch(0.22 0.045 190);
+  --teal-soft: oklch(0.55 0.055 185);
 
-  --gradient-silver: linear-gradient(135deg, oklch(0.95 0.003 250) 0%, oklch(0.78 0.005 250) 50%, oklch(0.62 0.005 250) 100%);
-  --gradient-ink: linear-gradient(180deg, oklch(0.22 0.01 270) 0%, oklch(0.12 0.01 270) 100%);
-  --shadow-luxe: 0 30px 60px -30px oklch(0.18 0.01 270 / 0.25), 0 18px 36px -18px oklch(0.18 0.01 270 / 0.15);
-  --shadow-card: 0 1px 2px oklch(0.18 0.01 270 / 0.04), 0 8px 24px -8px oklch(0.18 0.01 270 / 0.08);
-  --shadow-card-hover: 0 2px 4px oklch(0.18 0.01 270 / 0.06), 0 24px 48px -12px oklch(0.18 0.01 270 / 0.18);
+  --gradient-silver: linear-gradient(135deg, oklch(0.95 0.003 220) 0%, oklch(0.80 0.005 220) 50%, oklch(0.64 0.008 200) 100%);
+  --gradient-ink: linear-gradient(180deg, oklch(0.32 0.05 185) 0%, oklch(0.18 0.04 190) 100%);
+  --gradient-teal: linear-gradient(135deg, oklch(0.34 0.055 185) 0%, oklch(0.20 0.04 190) 100%);
+  --shadow-luxe: 0 30px 60px -30px oklch(0.20 0.045 190 / 0.35), 0 18px 36px -18px oklch(0.20 0.045 190 / 0.20);
+  --shadow-card: 0 1px 2px oklch(0.20 0.045 190 / 0.05), 0 8px 24px -8px oklch(0.20 0.045 190 / 0.10);
+  --shadow-card-hover: 0 2px 4px oklch(0.20 0.045 190 / 0.08), 0 24px 48px -12px oklch(0.20 0.045 190 / 0.22);
 }
 
 @layer base {
@@ -103,6 +110,7 @@
   .shadow-card { box-shadow: var(--shadow-card); }
   .bg-gradient-silver { background: var(--gradient-silver); }
   .bg-gradient-ink { background: var(--gradient-ink); }
+  .bg-gradient-teal { background: var(--gradient-teal); }
 
   .eyebrow {
     font-size: 0.7rem;
