@@ -1,4 +1,4 @@
-import { buildWhatsappGeneric } from "@/lib/whatsapp";
+import { buildWhatsappGeneric, INSTAGRAM_URL, INSTAGRAM_HANDLE } from "@/lib/whatsapp";
 import { Phone, Clock, MapPin, MessageCircle, Instagram } from "lucide-react";
 
 export function Contact() {
@@ -23,8 +23,8 @@ export function Contact() {
             <MessageCircle className="h-5 w-5" />
             Chamar Hikellme no WhatsApp
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-silver">
-            <Instagram className="h-4 w-4" /> @selo925
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-silver">
+            <Instagram className="h-4 w-4" /> {INSTAGRAM_HANDLE}
           </a>
         </div>
       </div>
