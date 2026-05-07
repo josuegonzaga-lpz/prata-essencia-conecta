@@ -10,7 +10,7 @@ export function Contact() {
           <div className="eyebrow text-silver">Fale conosco</div>
           <h2 className="mt-3 font-display text-4xl leading-tight md:text-5xl">Atendimento direto</h2>
           <p className="mt-6 max-w-md text-primary-foreground/80">
-            Fale diretamente com o <strong className="text-silver">Hikellme</strong>, dono da SELO 925. Tire dúvidas, faça encomendas ou solicite atendimento personalizado.
+            Fale diretamente com a <strong className="text-silver">SELO 925</strong>. Tire dúvidas, faça encomendas ou solicite atendimento personalizado.
           </p>
           <div className="mt-10 space-y-5 text-sm">
             <div className="flex items-start gap-3"><Phone className="mt-1 h-4 w-4 text-silver" /><div><div className="text-silver">WhatsApp</div><div className="text-base text-primary-foreground">(62) 99854-9026</div></div></div>
