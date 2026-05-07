@@ -21,28 +21,28 @@ const SLIDES: Slide[] = [
     eyebrow: "Lançamentos",
     title: "Novas joias acabaram de chegar",
     subtitle: "10% OFF na primeira compra",
-    message: "Olá Hikellme! Quero conhecer os lançamentos da SELO 925.",
+    message: "Olá! Quero conhecer os lançamentos da SELO 925.",
   },
   {
     img: bannerBestsellers,
     eyebrow: "Mais Vendidos",
     title: "As preferidas das nossas clientes",
     subtitle: "Peças que não saem de moda",
-    message: "Olá Hikellme! Quero ver os mais vendidos da SELO 925.",
+    message: "Olá! Quero ver os mais vendidos da SELO 925.",
   },
   {
     img: bannerPrata,
     eyebrow: "Prata 925 Legítima",
     title: "Esterlina, com selo de garantia",
     subtitle: "Brilho que permanece",
-    message: "Olá Hikellme! Quero saber mais sobre as peças em Prata 925.",
+    message: "Olá! Quero saber mais sobre as peças em Prata 925.",
   },
 ];
 
 export function Hero() {
   const [emblaRef, embla] = useEmblaCarousel({ loop: true });
   const [selected, setSelected] = useState(0);
-  const cta = buildWhatsappGeneric("Olá Hikellme! Vim do site da SELO 925 e quero conhecer as joias.");
+  const cta = buildWhatsappGeneric("Olá! Vim do site da SELO 925 e quero conhecer as joias.");
 
   const scrollTo = useCallback((i: number) => embla?.scrollTo(i), [embla]);
 

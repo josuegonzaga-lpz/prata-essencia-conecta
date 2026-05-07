@@ -2,7 +2,7 @@ import { buildWhatsappGeneric } from "@/lib/whatsapp";
 import { MessageCircle } from "lucide-react";
 
 export function WhatsappFab() {
-  const url = buildWhatsappGeneric("Olá Hikellme! Vim do site da SELO 925.");
+  const url = buildWhatsappGeneric("Olá! Vim do site da SELO 925.");
   return (
     <a
       href={url}
