@@ -1,5 +1,5 @@
 export const WHATSAPP_NUMBER = "5562998549026";
-export const SELLER_NAME = "Hikellme";
+export const SELLER_NAME = "SELO 925";
 export const INSTAGRAM_URL = "https://www.instagram.com/selo.925/";
 export const INSTAGRAM_HANDLE = "@selo.925";
 

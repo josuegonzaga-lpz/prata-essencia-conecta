@@ -15,7 +15,7 @@ export function Footer() {
           </a>
         </div>
         <FooterCol title="Institucional" items={[["Quem Somos","#sobre"],["FAQ","#"],["Fale Conosco","#contato"]]} />
-        <FooterCol title="Ajuda & Suporte" items={[["Entrega em Goiânia","#"],["Como Pedir","#"],["Como Cuidar","#"],["Fale com Hikellme","#contato"]]} />
+        <FooterCol title="Ajuda & Suporte" items={[["Entrega em Goiânia","#"],["Como Pedir","#"],["Como Cuidar","#"],["Fale Conosco","#contato"]]} />
         <FooterCol title="Categorias" items={[["Anéis","#colecao"],["Correntes","#colecao"],["Brincos","#colecao"],["Pulseiras","#colecao"],["Pingentes","#colecao"]]} />
       </div>
       <div className="border-t border-border py-6 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">

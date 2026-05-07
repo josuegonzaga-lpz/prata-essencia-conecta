@@ -4,7 +4,7 @@ const FAQS = [
   { q: "Como saber se a prata é verdadeira?", a: "Todas as nossas peças possuem o selo 925, que comprova que são feitas em prata esterlina legítima — composta por 92,5% de prata pura." },
   { q: "Vocês entregam em qual região?", a: "Em Goiânia entregamos no mesmo dia via motoboy. Para todo o Brasil enviamos via Correios, PAC, Jadlog e transportadoras." },
   { q: "Como cuidar das minhas joias de prata?", a: "Evite contato com perfumes, cremes e cloro. Guarde em local seco e, se necessário, limpe com flanela macia para manter o brilho." },
-  { q: "Como fazer um pedido?", a: "Basta clicar no botão 'Comprar pelo WhatsApp' do produto desejado. Você será direcionado direto para uma conversa com o Hikellme com a mensagem pronta." },
+  { q: "Como fazer um pedido?", a: "Basta clicar no botão 'Comprar pelo WhatsApp' do produto desejado. Você será direcionado direto para uma conversa direta com a loja com a mensagem pronta." },
   { q: "Quais formas de pagamento?", a: "Aceitamos cartão em até 4x sem juros, PIX e dinheiro." },
 ];
 

@@ -3,7 +3,7 @@ import { buildWhatsappGeneric } from "@/lib/whatsapp";
 import { Sparkles, Cross, Gem } from "lucide-react";
 
 export function About() {
-  const cta = buildWhatsappGeneric("Olá Hikellme! Quero conhecer mais sobre a SELO 925.");
+  const cta = buildWhatsappGeneric("Olá! Quero conhecer mais sobre a SELO 925.");
   return (
     <section id="sobre" className="relative overflow-hidden border-t border-border bg-gradient-ink py-24 text-primary-foreground md:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:gap-20">
