@@ -7,8 +7,23 @@ export function formatBRL(value: number): string {
   return value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
 
-export function buildWhatsappUrl(productName: string, price: number): string {
-  const msg = `Olá, tenho interesse no produto: ${productName} - ${formatBRL(price)}`;
+export type PaymentMethod = "pix" | "cartao" | "boleto";
+
+const PAYMENT_LABEL: Record<PaymentMethod, string> = {
+  pix: "PIX",
+  cartao: "Cartão de Crédito",
+  boleto: "Boleto Bancário",
+};
+
+export function buildWhatsappUrl(
+  productName: string,
+  price: number,
+  payment?: PaymentMethod,
+  codigo?: string,
+): string {
+  const cod = codigo ? ` (cód. ${codigo})` : "";
+  const pay = payment ? `\nForma de pagamento: ${PAYMENT_LABEL[payment]}` : "";
+  const msg = `Olá! Tenho interesse no produto:\n${productName}${cod}\nValor: ${formatBRL(price)}${pay}\n\nPoderia me ajudar a finalizar a compra?`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }
 
