@@ -3,9 +3,9 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo-selo925.jpeg";
 
 const NAV = [
-  { label: "Coleção", href: "#colecao" },
-  { label: "Mais Vendidos", href: "#mais-vendidos" },
-  { label: "Lançamentos", href: "#lancamentos" },
+  { label: "Relógios", href: "#relogios" },
+  { label: "Em Estoque", href: "#colecao" },
+  { label: "Em Breve", href: "#colecao" },
   { label: "Sobre", href: "#sobre" },
   { label: "Contato", href: "#contato" },
 ];
