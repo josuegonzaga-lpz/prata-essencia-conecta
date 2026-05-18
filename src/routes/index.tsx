@@ -31,9 +31,9 @@ function Index() {
       <Header />
       <main>
         <Hero />
+        <Highlights />
         <Categories />
         <ProductGrid />
-        <Highlights />
         <About />
         <Info />
         <FAQ />
