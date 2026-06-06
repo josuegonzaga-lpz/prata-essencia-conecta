@@ -3,6 +3,8 @@ import type { Product } from "@/data/products";
 import { MessageCircle, QrCode, CreditCard, FileText, Lock } from "lucide-react";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { useCart } from "@/contexts/CartContext";
+import { ShoppingBag } from "lucide-react";
 
 function PaymentIcons({ size = "sm" }: { size?: "sm" | "md" }) {
   const cls = size === "sm" ? "h-3.5 w-3.5" : "h-4 w-4";
@@ -40,6 +42,7 @@ function StatusBadge({ p }: { p: Product }) {
 
 export function ProductCard({ p }: { p: Product }) {
   const [open, setOpen] = useState(false);
+  const { addToCart } = useCart();
   const comingSoon = p.status === "em_breve";
   const soldOut = p.status === "esgotado";
   const available = p.status === "disponivel";
@@ -105,15 +108,14 @@ export function ProductCard({ p }: { p: Product }) {
               <div className="mt-4">
                 <PaymentIcons />
               </div>
-              <a
-                href={buildWhatsappUrl(p.nome, p.preco, "pix", p.codigo)}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => addToCart(p)}
                 className="mt-4 inline-flex h-11 items-center justify-center gap-2 rounded-sm bg-primary text-[12px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-ink"
               >
-                <MessageCircle className="h-4 w-4" />
-                Comprar agora
-              </a>
+                <ShoppingBag className="h-4 w-4" />
+                Adicionar ao Carrinho
+              </button>
             </>
           )}
 
@@ -204,27 +206,23 @@ export function ProductCard({ p }: { p: Product }) {
 
                   <div className="mt-5 grid grid-cols-3 gap-2">
                     {(["pix", "cartao", "boleto"] as PaymentMethod[]).map((m) => (
-                      <a
+                      <div
                         key={m}
-                        href={buildWhatsappUrl(p.nome, p.preco, m, p.codigo)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex h-10 items-center justify-center rounded-sm border border-border bg-background text-[11px] uppercase tracking-[0.18em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-background"
+                        className="inline-flex h-10 items-center justify-center rounded-sm border border-border bg-background text-[11px] uppercase tracking-[0.18em] text-ink"
                       >
                         {m === "pix" ? "Pix" : m === "cartao" ? "Cartão" : "Boleto"}
-                      </a>
+                      </div>
                     ))}
                   </div>
 
-                  <a
-                    href={buildWhatsappUrl(p.nome, p.preco, "pix", p.codigo)}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => addToCart(p)}
                     className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-sm bg-primary text-[12px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-ink"
                   >
-                    <MessageCircle className="h-4 w-4" />
-                    Comprar agora pelo WhatsApp
-                  </a>
+                    <ShoppingBag className="h-4 w-4" />
+                    Adicionar ao Carrinho
+                  </button>
                 </div>
               )}
 

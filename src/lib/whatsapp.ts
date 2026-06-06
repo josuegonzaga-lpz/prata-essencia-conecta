@@ -27,6 +27,19 @@ export function buildWhatsappUrl(
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }
 
+export function buildCartWhatsappUrl(items: { name: string; quantity: number; price: number; code?: string }[], total: number): string {
+  let msg = `Olá! Gostaria de finalizar o seguinte pedido:\n\n`;
+  
+  items.forEach(item => {
+    const cod = item.code ? ` (cód. ${item.code})` : "";
+    msg += `${item.quantity}x ${item.name}${cod} - ${formatBRL(item.price * item.quantity)}\n`;
+  });
+  
+  msg += `\n*Total: ${formatBRL(total)}*\n\nPoderia me enviar o link de pagamento?`;
+  
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
 export function buildWhatsappGeneric(text: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
